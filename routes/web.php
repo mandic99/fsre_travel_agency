@@ -24,3 +24,5 @@ Route::resource('/admin/users','Admin\UsersController',['except' => ['show','cre
 Route::namespace('Admin') ->prefix('admin') ->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('/users','UsersController',['except' => ['show','create' ,'store']]);
 });
+
+URL::forceRootUrl('http://studenti.sum.ba/projekti/fsre/2019/g15');
